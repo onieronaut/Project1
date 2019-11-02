@@ -1,4 +1,4 @@
-const desert  = {
+const desert = {
     dropDown: $("#desert"),
     menu: {
         icon: $("#desertPlanets"),
@@ -6,7 +6,7 @@ const desert  = {
     }
 }
 
-const frozen  = {
+const frozen = {
     dropDown: $("#frozen"),
     menu: {
         icon: $("#frozenPlanets"),
@@ -14,7 +14,7 @@ const frozen  = {
     }
 }
 
-const tropicalJungle  = {
+const tropicalJungle = {
     dropDown: $("#tropicalJungle"),
     menu: {
         icon: $("#tropicalJunglePlanets"),
@@ -22,15 +22,15 @@ const tropicalJungle  = {
     }
 }
 
-const forrest  = {
-    dropDown: $("#forrest"),
+const forest = {
+    dropDown: $("#forest"),
     menu: {
-        icon: $("#forrestPlanets"),
+        icon: $("#forestPlanets"),
         hidden: false
     }
 }
 
-let selectArray = [desert, frozen, tropicalJungle, forrest]
+let selectArray = [desert, frozen, tropicalJungle, forest]
 
 desert.dropDown.on("click", function(){
     if (desert.menu.hidden = true) {
@@ -42,8 +42,8 @@ desert.dropDown.on("click", function(){
     frozen.menu.hidden = true
     tropicalJungle.menu.icon.hide();
     tropicalJungle.menu.hidden = true
-    forrest.menu.icon.hide();
-    forrest.menu.hidden = true
+    forest.menu.icon.hide();
+    forest.menu.hidden = true
 })
 
 frozen.dropDown.on("click", function(){
@@ -56,8 +56,8 @@ frozen.dropDown.on("click", function(){
     desert.menu.hidden = true
     tropicalJungle.menu.icon.hide();
     tropicalJungle.menu.hidden = true
-    forrest.menu.icon.hide();
-    forrest.menu.hidden = true
+    forest.menu.icon.hide();
+    forest.menu.hidden = true
 })
 
 tropicalJungle.dropDown.on("click", function(){
@@ -70,15 +70,15 @@ tropicalJungle.dropDown.on("click", function(){
     desert.menu.hidden = true
     frozen.menu.icon.hide();
     frozen.menu.hidden = true
-    forrest.menu.icon.hide();
-    forrest.menu.hidden = true
+    forest.menu.icon.hide();
+    forest.menu.hidden = true
 })
 
-forrest.dropDown.on("click", function(){
-    console.log("forrest")
-    if (forrest.menu.hidden = true) {
-        forrest.menu.icon.show();
-        forrest.menu.hidden = false;
+forest.dropDown.on("click", function(){
+    console.log("forest")
+    if (forest.menu.hidden = true) {
+        forest.menu.icon.show();
+        forest.menu.hidden = false;
     }
     desert.menu.icon.hide();
     desert.menu.hidden = true

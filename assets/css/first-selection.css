@@ -16,3 +16,7 @@ button p{
 .btn-warning {
     color: white;
 }
+
+.btn-outline-primary {
+    border: none;
+}
