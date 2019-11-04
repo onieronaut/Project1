@@ -1,60 +1,58 @@
-const planets = {
-    tatooine: {
+const planets = [
+    {
         name: "Tatooine",
         planetImg: "assets/images/planets/tatooine/planet.png"
     },
-    bespin: {
+    {
         name: "Bespin",
         planetImg: "assets/images/planets/bespin/planet.png"
     },
-    geonosis: {
+    {
         name: "Geonosis",
         planetImg: "assets/images/planets/geonosis/planet.png"
     },
-    hoth: {
+    {
         name: "Hoth",
         planetImg: "assets/images/planets/hoth/planet.png"
     },
-    coruscant: {
+    {
         name: "Coruscant",
         planetImg: "assets/images/planets/coruscant/planet.png"
     },
-    naboo: {
+    {
         name: "Naboo",
         planetImg: "assets/images/planets/naboo/planet.png"
     },
-    kashyyyk: {
+    {
         name: "Kashyyyk",
         planetImg: "assets/images/planets/kashyyyk/planet.png"
     },
-    felucia: {
+    {
         name: "Felucia",
         planetImg: "assets/images/planets/felucia/planet.png"
     },
-    dagobah: {
+    {
         name: "Dagobah",
         planetImg: "assets/images/planets/dagobah/planet.jpg",
     },
-    endor: {
+    {
         name: "Endor",
         planetImg: "assets/images/planets/endor/planet.png"
     },
-    yavinIV: {
+    {
         name: "Yavin IV",
         planetImg: "assets/images/planets/yavin-IV/planet.png"
     }
-}
-
-let planetArray = [planets.tatooine, planets.bespin, planets.geonosis, planets.hoth, planets.coruscant, planets.naboo, planets.kashyyyk, planets.felucia, planets.dagobah, planets.endor, planets.yavinIV]
+]
 
 planetSelection();
 
 function planetSelection() {
 
-    for (let i = 0; i < planetArray.length; i++) {
+    for (let i = 0; i < planets.length; i++) {
 
-        let planetName = planetArray[i].name;
-        let imgSrc = planetArray[i].planetImg;
+        let planetName = planets[i].name;
+        let imgSrc = planets[i].planetImg;
 
         // Button Content ============================
 
@@ -77,7 +75,7 @@ function planetSelection() {
         let planetP = $("<p>").text(planetName);
         planetBtn.append(planetP);
 
-        // Modal  ===================================
+        // Modal  ============================
 
         // <div class="modal fade" id="myModal" role="dialog">
         let modalDiv = $("<div>").addClass("modal fade").attr("id", "myModal").attr("role", "dialog");
@@ -96,9 +94,9 @@ function planetSelection() {
         modalContent.append(modalHeader);
 
         // <h4 class="modal-title"></h4>
-        let modalTitle = $("<h4>").addClass("modal-title").text(planetArray[i].name);
+        let modalTitle = $("<h4>").addClass("modal-title").text(planets[i].name);
         modalHeader.append(modalTitle);
-        console.log(planetArray[i].name)
+        console.log(planets[i].name)
 
         // <button type="button" class="close btn btn-warning" data-dismiss="modal">&times;</button>
         let xButton = $("<button>").attr("type", "button").addClass("close btn btn-default btn-warning").attr("data-dismiss", "modal").html("&times;");
